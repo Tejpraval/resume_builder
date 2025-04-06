@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <div class="main-con">
+        <div class="con">
+            <label for="profile-pic" class="Profile-text">Upload Profile Picture:</label>
+            <input type="file" id="profile-pic" accept="image/*">
+        </div>
+        <div class="container">
+            <!-- Left: Form Input -->
+
+            <div class="form-panel">
+                <h2 class="head">Resume Builder</h2>
+                <!-- <h3 class="head form-head">Form Panel</h3> -->
+                <label class="fullname">Full Name:</label>
+                <input type="text" id="name" placeholder="Your Name">
+
+                <label>Email:</label>
+                <input type="email" id="email" placeholder="Your Email">
+
+                <label>Phone:</label>
+                <input type="text" id="phone" placeholder="Your Phone Number">
+                <label>Address:</label>
+                <input type="text" id="address" placeholder="Your Address">
+                <label>Linkedin:</label>
+                <input type="text" id="linkedin" placeholder="Your Linkedin Profile">
+                <label>Education:</label>
+                <textarea id="education" placeholder="Your Education Details" class="divdis"></textarea>
+                <label>Experience:</label>
+                <textarea id="experience" placeholder="Your Work Experience" class="divdis"></textarea>
+
+                <label>Skills:</label>
+                <input type="text" id="skills" placeholder="E.g., JavaScript, HTML, CSS">
+                <label>Summary:</label>
+                <textarea id="summary" placeholder="A brief summary about yourself..." class="divdis"></textarea>
+
+                <label for="template">Choose a Template:</label>
+                <select id="template">
+                    <option value="default">Default</option>
+                    <option value="modern">Modern</option>
+                    <option value="elegant">Elegant</option>
+                </select>
+                <button id="dark-mode-toggle">🌙 Dark Mode</button>
+
+                <button onclick="updateResume()">Save Resume</button>
+                <button onclick="downloadPDF()">Download as PDF</button>
+
+            </div>
+
+            <!-- Right: Live Resume Preview -->
+            <div class="resume-panel" id="resume-preview">
+
+                <img id="profile-preview" src="" alt="Profile Picture" style="width: 110px; height: 110px; border-radius: 50%; display: none; margin-left:100px;">
+                <h2>CONTACT</h2>
+
+                <hr class="custom-hr">
+                <img src="https://icones.pro/wp-content/uploads/2021/03/icone-gmail-logo-png-jaune.png" class="image" />
+                <p id="preview-email">your.email@example.com</p>
+                <img src="https://icones.pro/wp-content/uploads/2021/03/icone-d-appel-et-d-appel-telephonique-jaune-1.png" class="image" />
+                <p id="preview-phone">+123 456 7890</p>
+                <img src="https://icones.pro/wp-content/uploads/2021/04/icones-de-localisation-de-la-carte-jaune.png" class="image" />
+                <p id="preview-address">1234 Park Avenue, CA</p>
+                <img src="https://icones.pro/wp-content/uploads/2021/03/icone-linkedin-ronde-jaune.png" class="image" />
+                <p id="preview-linkedin">linkedin.com/your name</p>
+                <h1>Education</h1>
+                <hr class="custom-hr">
+                <div id="preview-education" class="sortable divdis">Education details here</div>
+
+
+
+
+            </div>
+            <div class="resume-panel-2" id="resume-preview">
+                <h1 id="preview-name" class="headName">Your Name</h1>
+                <h2 class="head">Profile</h2>
+                <hr class="custom-hr">
+                <div id="preview-summary" class="sortable divdis">A brief summary about yourself...</div>
+                <h1>Skills</h1>
+                <hr class="custom-hr">
+                <div id="preview-skills">Skills here</div>
+                <h1>Experience</h1>
+                <hr class="custom-hr">
+                <div id="preview-experience" class="sortable divdis">Work experience here</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

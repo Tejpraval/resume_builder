@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+
+body {
+    margin: 0px;
+
+}
+
+.custom-hr {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* Container for form & preview */
+.container {
+    display: flex;
+    align-self: center;
+    width: 90%;
+    max-width: 1000px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    /*  padding-top: 5px; */
+}
+
+/* Make .main-con cover the entire screen */
+.main-con {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Center content horizontally */
+    background-color: #FAF0E6;
+    height: 150%;
+    /* Take full height of the parent (body) */
+    width: 100%;
+    /* Take full width of the parent (body) */
+    margin: 0;
+    /* Remove default margin */
+    padding: 0;
+    /* Remove default padding */
+    box-sizing: border-box;
+    /* Include padding and border in the element's total width and height */
+}
+
+.con {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+/* .head{
+    color: white ;
+    font-family: "Roboto";
+    font-size: 30px;
+} */
+
+/* Left Panel - Form */
+.form-panel {
+    width: 20%;
+    padding: 30px;
+    padding-top: 20px;
+    background: #2c3e50;
+    color: white;
+    font-family: "Roboto Mono";
+}
+
+.form-panel h2 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    height: 40px;
+    width: 150px;
+    ;
+    margin-top: 15px;
+    border: none;
+    background: #e67e22;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    overflow: auto;
+    margin: 10px;
+}
+
+.image {
+    width: 50px;
+    height: 50px;
+    padding-top: 7px;
+}
+
+button:hover {
+    background: #d35400;
+}
+
+.Profile-text {
+    font-size: 20px;
+    font-family: "Lato";
+    color: #B38B00;
+}
+
+/* Right Panel - Resume Preview */
+.resume-panel {
+    width: 40%;
+    padding: 30px;
+    padding-top: 20px;
+    background: white;
+    overflow-y: auto;
+    text-align: center;
+    font-family: "Lato";
+    background-color: #EAEAEA;
+
+}
+
+.resume-panel-2 {
+    width: 40%;
+    padding: 30px;
+    padding-top: 70px;
+    background: white;
+    overflow-y: auto;
+    font-family: "Lato";
+}
+
+.headName {
+    font-family: "Playfair Display";
+    font-size: 35px;
+    color: #B38B00;
+}
+
+.divdis {
+    font-family: "Playfair Display";
+
+    color: black;
+}
+
+.resume-panel h2,
+p,
+div {
+    margin: 10px 0;
+}
+
+/* Drag and Drop Section */
+.sortable {
+    cursor: grab;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background: #ecf0f1;
+}
+
+/* Default Template (Classic Look) */
+.default-template {
+    font-family: Arial, sans-serif;
+    color: black;
+    background: white;
+    text-align: center;
+}
+
+/* Modern Template (Bold and Clean) */
+.modern-template {
+    font-family: 'Poppins', sans-serif;
+    color: #34495e;
+    background: #ecf0f1;
+    border-left: 5px solid #2c3e50;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Elegant Template (Minimalist Look) */
+.elegant-template {
+    font-family: 'Times New Roman', serif;
+    color: #2c3e50;
+    background: #f8f9fa;
+    border-left: 5px solid #e67e22;
+    padding: 20px;
+    text-align: center;
+}
+
+#profile-preview {
+    margin-top: 10px;
+    border: 2px solid #ddd;
+    padding: 5px;
+    object-fit: cover;
+}
+
+/* Default Light Mode */
+/* body {
+    background: #f8f9fa;
+    color: #2c3e50;
+    transition: background 0.3s, color 0.3s;
+} */
+
+/* Dark Mode Styles */
+.dark-mode {
+    /*  background: #B38B00; */
+    color: #ffffff;
+
+}
+
+/* Adjust input fields */
+
+.dark-mode select {
+    background: #333;
+    color: white;
+    border: 1px solid #777;
+}
+
+/* .dark-mode div, */
+.dark-mode input {
+    color: black;
+    border: 1px solid #777;
+}
+
+.dark-mode textarea {
+    color: black;
+    border: 1px solid #777;
+}
+
+/* Adjust form panel */
+.dark-mode .form-panel {
+    background: black;
+    color: #ffffff;
+}
+
+.dark-mode .resume-panel {
+    background-color: #2C2C2C;
+}
+
+.dark-mode .resume-panel-2 {
+    background-color: #D3D3D3;
+    color: #2C2C2C;
+}
+
+/* Adjust buttons */
+.dark-mode button {
+    background: #444;
+    color: white;
+    border: 1px solid #666;
+    height: 40px;
+    width: 150px;
+    text-align: center;
+    overflow: auto;
+}
+
+.dark-mode button:hover {
+    background-color: #B38B00;
+}
+
+/* Adjust preview */
+/* .dark-mode #resume-preview {
+    background: #333;
+    border-color: #777;
+} */
+
+/* Ensure panels are side by side in the PDF */
+.resume-panel,
+.resume-panel-2 {
+    width: 50%;
+    /* Adjust width to fit side by side */
+    box-sizing: border-box;
+}
+
+/* Flexbox layout for the wrapper */
+.pdf-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    padding: 0px;
+    margin: 0px;
+    /* Add spacing between panels */
+    width: 100%;
+}
+
+/* Customize bullet points */
+#preview-skills ul {
+    list-style-type: disc;
+    /* Use disc bullets (default) */
+    margin-left: 20px;
+    /* Add left margin for indentation */
+    padding-left: 10px;
+    /* Add padding for better spacing */
+}
+
+#preview-skills li {
+    margin-bottom: 5px;
+    /* Add spacing between list items */
+}
+
+@media screen and (max-width:991px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+
+        width: 80%;
+        max-width: 1000px;
+        background: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        overflow-x: auto;
+        flex-wrap: wrap;
+        /*  padding-top: 5px; */
+
+    }
+
+    .resume-panel {
+        width: 70%;
+        padding: 30px;
+        padding-top: 20px;
+        background: white;
+        overflow-y: auto;
+        text-align: center;
+        font-family: "Lato";
+        background-color: #EAEAEA;
+        align-self: center;
+
+    }
+
+    .form-panel {
+        display: flex;
+
+        width: 85%;
+        /*  padding: 20px; */
+        align-self: flex-start;
+        padding-right: 20px;
+        /* margin: 50px; */
+        background: #2c3e50;
+        color: white;
+        font-family: "Roboto Mono";
+        justify-content: center;
+        padding-top: 20px;
+        /*  padding-left: 100px; */
+        /*  overflow: scroll; */
+        flex-wrap: wrap;
+
+
+
+    }
+
+    .resume-panel-2 {
+
+        width: 70%;
+        padding: 30px;
+        padding-top: 70px;
+        background: white;
+        overflow-y: auto;
+        font-family: "Lato";
+        align-self: center;
+    }
+
+    .head {
+        align-self: center;
+        margin: 45px;
+        font-size: 55px;
+        font-family: "Sans-Serif";
+    }
+
+
+    .fullname {
+        align-self: flex-start;
+        padding-top: 50px;
+
+    }
+
+    .button {
+        height: 40px;
+        width: 150px;
+        text-align: center;
+        padding: 20px;
+        margin: 15px;
+        border: none;
+        background: #e67e22;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        overflow: auto;
+    }
+
+    .dark-mode button {
+        background: #444;
+        color: white;
+        border: 1px solid #666;
+        height: 40px;
+        width: 150px;
+        text-align: center;
+        overflow: auto;
+    }
+}
